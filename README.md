@@ -113,6 +113,14 @@ pip install sentencepiece
 
 https://huggingface.co/google/flan-t5-small/resolve/main/spiece.model
 
+cd llama.cpp:
+mkdir build && cd build
+cmake -DLLAMA_METAL=on ..
+cmake ..
+cmake --build . --config Release
+./bin/llama-cli -m /Users/rithvik/projects/ollama/gguf-to-ollama-model/model.gguf -p "who is naveen gunasekearan"
+
+
 
 
 
