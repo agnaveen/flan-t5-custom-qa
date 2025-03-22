@@ -80,6 +80,38 @@ python train_flan.py
 ```
 
 
+### Helpful commands
+```bash
+git clone https://github.com/ggml-org/llama.cpp
+
+cd llama.cpp
+
+pip install -r requirements.txt
+
+python3 convert_hf_to_gguf.py \
+  --outfile ./flan-custom.gguf \
+  --outtype f16 \
+  ../flan-alpaca-clean/flan-tuned
+
+
+flan-custom-model.txt:
+FROM flan-custom.gguf
+
+Then run:
+ollama create flanc -f flan-custom-model.txt
+
+ollama run flanc
+
+
+find ~/.cache/huggingface/hub/ -name "spiece.model"
+
+pip install torch torchvision torchaudio
+
+brew install cmake pkg-config coreutils
+
+pip install sentencepiece
+
+
 
 
 
