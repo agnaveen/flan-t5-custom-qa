@@ -111,6 +111,9 @@ brew install cmake pkg-config coreutils
 
 pip install sentencepiece
 
+https://huggingface.co/google/flan-t5-small/resolve/main/spiece.model
+
+
 
 
 
